@@ -10,6 +10,7 @@ type Result struct {
 	Content string
 }
 
+// 1) Feed + searchTerm --> 2) http get (retrieve) --> Result (Using Channel)
 // Matcher defines the behavior required by types that want
 // to implement a new search type.
 type Matcher interface {
@@ -28,6 +29,7 @@ func Match(matcher Matcher, feed *Feed, searchTerm string, results chan<- *Resul
 
 	// Write the results to the channel.
 	for _, result := range searchResults {
+		log.Println("Match -> searchResults: ", result)
 		results <- result
 	}
 }

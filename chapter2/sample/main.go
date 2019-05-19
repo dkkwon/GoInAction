@@ -12,6 +12,7 @@ import (
 func init() {
 	// Change the device for logging to stdout.
 	log.SetOutput(os.Stdout)
+	log.SetFlags(log.Ldate | log.Lmicroseconds | log.Lshortfile)
 }
 
 // main is the entry point for the program.

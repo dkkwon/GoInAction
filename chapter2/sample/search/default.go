@@ -1,5 +1,7 @@
 package search
 
+import "log"
+
 // defaultMatcher implements the default matcher.
 type defaultMatcher struct{}
 
@@ -11,5 +13,15 @@ func init() {
 
 // Search implements the behavior for the default matcher.
 func (m defaultMatcher) Search(feed *Feed, searchTerm string) ([]*Result, error) {
+	log.Println("DummySearch")
+	return nil, nil
+}
+
+type TypeMatcher interface {
+	SearchType(feed *Feed, searchTerm string) ([]*Result, error)
+}
+
+func (m *defaultMatcher) SearchType(feed *Feed, searchTerm string) ([]*Result, error) {
+	log.Println("SearchType")
 	return nil, nil
 }

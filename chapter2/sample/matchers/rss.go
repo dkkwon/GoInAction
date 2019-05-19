@@ -64,6 +64,7 @@ type rssMatcher struct{}
 func init() {
 	var matcher rssMatcher
 	search.Register("rss", matcher)
+	log.Println(">>> test init <<<")
 }
 
 // Search looks at the document for the specified search term.

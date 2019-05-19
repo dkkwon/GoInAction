@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// search 할때, feed.type별 Match (interface) 를 사용함 -> feed.type 별 register 함
 // A map of registered matchers for searching.
 var matchers = make(map[string]Matcher)
 
@@ -28,6 +29,9 @@ func Run(searchTerm string) {
 
 	// Launch a goroutine for each feed to find the results.
 	for _, feed := range feeds {
+
+		// feed.Type 에 따른 search 결정 필요
+		// feed.Type -> interface  = struct 선택 (구현 파일) -> search 방식 선택
 		// Retrieve a matcher for the search.
 		matcher, exists := matchers[feed.Type]
 		if !exists {
@@ -46,6 +50,7 @@ func Run(searchTerm string) {
 		// Wait for everything to be processed.
 		waitGroup.Wait()
 
+		// channel -> range 를 썻으므로, close 해야 함
 		// Close the channel to signal to the Display
 		// function that we can exit the program.
 		close(results)
