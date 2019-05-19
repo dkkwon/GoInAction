@@ -16,6 +16,8 @@ func printer(ch chan int) {
 
 // main is the entry point for the program.
 func main() {
+	// runtime.GOMAXPROCS(1)
+
 	c := make(chan int)
 	go printer(c)
 	wg.Add(1)
@@ -24,6 +26,8 @@ func main() {
 	for i := 1; i <= 10; i++ {
 		c <- i
 	}
+
+	// fmt.Println(">>> end of main <<<<")
 
 	close(c)
 	wg.Wait()
