@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Jpub/GoInAction/chapter5/listing74/entities"
+	"github.com/dkkwon/GoInAction/chapter5/listing74/entities"
 )
 
 // main is the entry point for the application.

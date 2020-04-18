@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Jpub/GoInAction/chapter9/listing17/handlers"
+	"github.com/dkkwon/GoInAction/chapter9/listing17/handlers"
 )
 
 // main is the entry point for the application.

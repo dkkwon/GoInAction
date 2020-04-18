@@ -6,7 +6,7 @@ package main
 import (
 	"log"
 
-	"github.com/Jpub/GoInAction/chapter7/patterns/search"
+	"github.com/dkkwon/GoInAction/chapter7/patterns/search"
 )
 
 // main is the entry point for all Go programs.

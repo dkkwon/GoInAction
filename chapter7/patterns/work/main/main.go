@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Jpub/GoInAction/chapter7/patterns/work"
+	"github.com/dkkwon/GoInAction/chapter7/patterns/work"
 )
 
 // names provides a set of names to display.

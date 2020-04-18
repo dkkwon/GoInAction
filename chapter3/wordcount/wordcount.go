@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/Jpub/GoInAction/chapter3/words"
+	"github.com/dkkwon/GoInAction/chapter3/words"
 )
 
 // main is the entry point for the application.

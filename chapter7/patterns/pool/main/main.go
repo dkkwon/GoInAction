@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Jpub/GoInAction/chapter7/patterns/pool"
+	"github.com/dkkwon/GoInAction/chapter7/patterns/pool"
 )
 
 const (
