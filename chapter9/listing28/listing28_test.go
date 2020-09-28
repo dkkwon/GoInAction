@@ -9,6 +9,7 @@ import (
 	"testing"
 )
 
+// go test -run="none" -bench="BenchmarkSprintf" --benchtime=3s
 // BenchmarkSprintf provides performance numbers for the
 // fmt.Sprintf function.
 func BenchmarkSprintf(b *testing.B) {

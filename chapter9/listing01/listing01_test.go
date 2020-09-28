@@ -9,6 +9,13 @@ import (
 const checkMark = "\u2713"
 const ballotX = "\u2717"
 
+// go test
+// go test -v
+// go test .
+// go test -v .
+// go test ./...
+// go test -v ./...
+
 // TestDownload validates the http Get function can download content.
 func TestDownload(t *testing.T) {
 	// url := "http://www.goinggo.net/feeds/posts/default?alt=rss"
