@@ -24,11 +24,9 @@ func TestSendJSON(t *testing.T) {
 	{
 		req, err := http.NewRequest("GET", "/sendjson", nil)
 		if err != nil {
-			t.Fatal("\tShould be able to create a request.",
-				ballotX, err)
+			t.Fatal("\tShould be able to create a request.", ballotX, err)
 		}
-		t.Log("\tShould be able to create a request.",
-			checkMark)
+		t.Log("\tShould be able to create a request.", checkMark)
 
 		rw := httptest.NewRecorder()
 		http.DefaultServeMux.ServeHTTP(rw, req)
